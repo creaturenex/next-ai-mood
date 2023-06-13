@@ -32,3 +32,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## OSCAR
+### Built using
+- [Clerk](https://clerk.com/docs/nextjs/get-started-with-nextjs)
+- [PlanetScale](https://planetscale.com/) A serverless MySql database
+  - [w/Prisma](https://planetscale.com/docs/prisma/prisma-quickstart)
+- [Prisma](https://www.prisma.io/docs/guides/database/planetscale)
+  - Prisma has a PlanetScale tool but PlanetScale handles a PrismaClient out of the box w/out additional setup
+- [Neon](https://neon.tech/) Not used but for reference a Postgres serverless database
