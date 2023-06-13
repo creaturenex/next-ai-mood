@@ -42,3 +42,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [Prisma](https://www.prisma.io/docs/guides/database/planetscale)
   - Prisma has a PlanetScale tool but PlanetScale handles a PrismaClient out of the box w/out additional setup
 - [Neon](https://neon.tech/) Not used but for reference a Postgres serverless database
+
+NextAuth.js if you wanna roll your own Auth
+- ie
+
+Clerk is prebuilt auth
