@@ -1,5 +1,4 @@
 // react server component
-
 import EntryCard from '@/components/EntryCard'
 import NewEntryCard from '@/components/NewEntryCard'
 import { getUserByClerkID } from '@/utils/auth'

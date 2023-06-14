@@ -1,8 +1,8 @@
 // this is regular client side react component
 'use client'
 
-import { createNewEntry } from "@/utils/api"
-import { useRouter } from "next/navigation"
+import { createNewEntry } from '@/utils/api'
+import { useRouter } from 'next/navigation'
 
 const NewEntryCard = () => {
   const router = useRouter()

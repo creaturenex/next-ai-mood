@@ -16,6 +16,7 @@ const Editor = ({ entry }) => {
       setIsLoading(false)
     },
   })
+
   return (
     <div className="w-full h-full">
       {isLoading && <div>...loading</div>}
