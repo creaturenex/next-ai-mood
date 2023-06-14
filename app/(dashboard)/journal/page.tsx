@@ -1,6 +1,7 @@
 // react server component
 import EntryCard from '@/components/EntryCard'
 import NewEntryCard from '@/components/NewEntryCard'
+import { analyze } from '@/utils/ai'
 import { getUserByClerkID } from '@/utils/auth'
 import { prisma } from '@/utils/db'
 import Link from 'next/link'
@@ -16,6 +17,10 @@ const getEntries = async () => {
     },
   })
 
+  await analyze(`I am going to give you a journal entry, I want you to analyze it for a few things. I need the mood, a summary, what the subject is, and a color representing the mood. You need to respond back with formatted JSON like so: {"mood": "", "subject": "", "color": "", "negative":""}.
+
+  entry:
+  Today was a really great day! I was able to propagate some frogspawn and torch corals`)
   return entries
 }
 
