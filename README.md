@@ -37,13 +37,20 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## OSCAR
 ### Built using
 - [Clerk](https://clerk.com/docs/nextjs/get-started-with-nextjs)
+  - Clerk is prebuilt auth and user tracking
 - [PlanetScale](https://planetscale.com/) A serverless MySql database
   - [w/Prisma](https://planetscale.com/docs/prisma/prisma-quickstart)
 - [Prisma](https://www.prisma.io/docs/guides/database/planetscale)
   - Prisma has a PlanetScale tool but PlanetScale handles a PrismaClient out of the box w/out additional setup
 - [Neon](https://neon.tech/) Not used but for reference a Postgres serverless database
 
-NextAuth.js if you wanna roll your own Auth
-- ie
-
-Clerk is prebuilt auth
+- NextAuth.js if you wanna roll your own Auth
+- [LangChain](https://js.langchain.com/docs/)
+  - LangChain is a framework for developing applications powered by language models. We believe that the most powerful and differentiated applications will not only call out to a language model via an API
+  - [LangChain on github](https://github.com/hwchase17/langchainjs)
+- [OpenAI](https://platform.openai.com/)
+- [T3](https://create.t3.gg/)
+  - Typesafe next.js app builder
+  - The best way to start a full-stack, typesafe Next.js app
+- [Zos](https://zod.dev/)
+  - tool to create a json formated schema
