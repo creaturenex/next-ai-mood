@@ -1,10 +1,10 @@
 import { PrismaClient } from "@prisma/client";
-// globalThis left of the dot
 
+// globalThis same as, left of the dot
+// because of nextjs hot reload, sometimes it the client will crash after x amount of reloads
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined
 }
-// because of nextjs hot reload, sometimes it the client will crash after x amount of reloads
 
 // Type Annotations
 export const prisma =

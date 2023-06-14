@@ -1,4 +1,4 @@
-// this is regular react component
+// this is regular client side react component
 'use client'
 
 import { createNewEntry } from "@/utils/api"
@@ -13,11 +13,8 @@ const NewEntryCard = () => {
   }
 
   return (
-    <div
-      className="cursor-pointer overflow-hidden rounded-lg bg-white shadow"
-      onClick={handleOnClick}
-    >
-      <div className="px-4 py-5 sm:p-6">
+    <div className="cursor-pointer overflow-hidden rounded-lg bg-white shadow">
+      <div className="px-4 py-5 sm:p-6" onClick={handleOnClick}>
         <span className="text-3xl">New Entry</span>
       </div>
     </div>

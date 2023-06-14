@@ -10,7 +10,7 @@ export const POST = async () => {
     data: {
       userId: user.id,
       content: 'Write about your day!'
-    }
+    },
   })
 
   revalidatePath('/journal')

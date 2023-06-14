@@ -8,16 +8,16 @@ const createNewUser = async () => {
 
   const match = await prisma.user.findUnique({
     where: {
-      clerkId: user?.id as string
+      clerkId: user.id as string,
     },
   })
 
   if (!match) {
     await prisma.user.create({
       data: {
-        clerkId: user?.id as string,
-        email: user?.emailAddresses[0].emailAddress as string,
-        },
+        clerkId: user.id as string,
+        email: user.emailAddresses[0].emailAddress as string,
+      },
     })
   }
   redirect('/journal')
