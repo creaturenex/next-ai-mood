@@ -6,7 +6,6 @@ import { NextResponse } from 'next/server'
 export const PATCH = async (request: Request, { params }) => {
   const { content } = await request.json()
   const user = await getUserByClerkID()
-  const analysis = await analyze(updatedEntry.content)
 
   const updatedEntry = await prisma.journalEntry.update({
     where: {
@@ -15,15 +14,16 @@ export const PATCH = async (request: Request, { params }) => {
         id: params.id,
       },
     },
-    create: {
+    data: {
       content,
     },
-    update: analysis,
   })
+
+  const analysis = await analyze(updatedEntry.content)
 
   const updated = await prisma.analysis.upsert({
     where: {
-      entryId: updatedEntry.id
+      entryId: updatedEntry.id,
     },
     create: {
       entryId: updatedEntry.id,
@@ -32,5 +32,5 @@ export const PATCH = async (request: Request, { params }) => {
     update: analysis,
   })
 
-  return NextResponse.json({ data: { ...updatedEntry, analysis: updated }})
+  return NextResponse.json({ data: { ...updatedEntry, analysis: updated } })
 }
